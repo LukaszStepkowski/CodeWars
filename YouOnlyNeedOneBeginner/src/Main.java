@@ -4,7 +4,12 @@ public class Main {
     }
 
     public static boolean check(Object[] a, Object x) {
-        // Your code here
+
+        for (Object object : a) {
+            if (x.equals(object)) {
+                return true;
+            }
+        }
         return false;
     }
 }
