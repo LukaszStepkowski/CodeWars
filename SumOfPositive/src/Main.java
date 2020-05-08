@@ -4,6 +4,14 @@ public class Main {
     }
 
     public static int sum(int[] arr){
-        return 0;
+
+        int positiveSum = 0;
+
+        for (int number : arr){
+            if (number > 0){
+                positiveSum += number;
+            }
+        }
+        return positiveSum;
     }
 }
