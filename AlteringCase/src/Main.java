@@ -6,11 +6,12 @@ public class Main {
     public static String toAlternativeString(String string) {
 
         char[] stringToCharArray = string.toCharArray();
-        for (Character character : stringToCharArray) {
-            if (character > 96 && character < 123) {
-                character = Character.toUpperCase(character);
-            } else if (character > 64 && character < 91) {
-                character = Character.toLowerCase(character);
+        for (int i = 0; i < stringToCharArray.length; i++) {
+            if (stringToCharArray[i] > 96 && stringToCharArray[i] < 123){
+                stringToCharArray[i] -= 32;
+            } else
+            if (stringToCharArray[i] > 64 && stringToCharArray[i] < 91){
+                stringToCharArray[i] += 32;
             }
         }
 
