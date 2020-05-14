@@ -4,6 +4,6 @@ public class main {
     }
 
     public class ToString {
-        public static final String a = 123.toString();
+        public static final String a = "123";
     }
 }
