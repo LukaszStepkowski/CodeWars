@@ -4,7 +4,11 @@ public class Main {
     }
 
     public static boolean divide(int weight) {
-        // your code here
+        if (weight / 2 <= 1){
+            return false;
+        } else if (weight % 2 == 0){
+            return true;
+        }
         return false;
     }
 }
