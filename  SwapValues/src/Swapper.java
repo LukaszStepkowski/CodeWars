@@ -1,5 +1,14 @@
 public class Swapper{
 
+    public static void main(String[] args) {
+        Integer[] argums = new Integer[]{1, 2};
+
+        Swapper sw = new Swapper(argums);
+        sw.swapValues();
+        System.out.println(sw.arguments[0]);
+        System.out.println(sw.arguments[1]);
+    }
+
     public Object[] arguments;
 
     public Swapper(final Object[] args){
@@ -7,9 +16,8 @@ public class Swapper{
     }
 
     public void swapValues() {
-        Object[] args = new Object[]{arguments[0],arguments[1]};
-        Object temp = args[0];
-        args[0] = args[1];
-        args[1] = temp;
+        Object temp = arguments[0];
+        arguments[0] = arguments[1];
+        arguments[1] = temp;
     }
 }
