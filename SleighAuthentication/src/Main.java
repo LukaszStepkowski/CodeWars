@@ -4,6 +4,8 @@ public class Main {
     }
 
     public static Boolean authenticate(String name, String password){
-        return false;
+        if (name.equals("Santa Claus") && password.equals("Ho Ho Ho!")){
+            return true;
+        } else return false;
     }
 }
