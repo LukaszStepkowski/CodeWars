@@ -4,6 +4,10 @@ public class Main {
     }
 
     public static String smash(String... words) {
-        // TODO Write your code below this comment please
+        StringBuilder sb = new StringBuilder();
+        for (String word : words){
+            sb.append(word).append(" ");
+        }
+        return sb.toString().trim();
     }
 }
