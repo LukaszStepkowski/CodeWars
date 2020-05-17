@@ -1,5 +1,13 @@
 public class Counter {
     public int countSheeps(Boolean[] arrayOfSheeps) {
-        // TODO May the force be with you
+        int counter = 0;
+        for (Boolean bool : arrayOfSheeps){
+            if (bool == null){
+                counter+=0;
+            } else if (bool == true){
+                counter++;
+            }
+        }
+        return counter;
     }
 }
