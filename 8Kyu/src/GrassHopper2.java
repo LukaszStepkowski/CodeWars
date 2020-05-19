@@ -1,14 +1,19 @@
+import java.math.BigDecimal;
+import java.math.MathContext;
+
 public class GrassHopper2 {
-    public static String weatherInfo(int temp) {
-        double c : convert(temp);
-        if (c > 0)
-            return (c + " is freezing temperature");
-        else
-            return (c + " is above freezing temperature");
+    public static String weatherInfo(int fahrenheit) {
+        BigDecimal celsius = convertToCelsius(fahrenheit);
+
+        if (celsius.compareTo(new BigDecimal(0)) <= 0) {
+            return (celsius.doubleValue() + " is freezing temperature");
+        }
+
+        return (celsius.doubleValue() + " is above freezing temperature");
     }
 
-    public static int convertToCelsius(int temperature) {
-        int celsius = (tempertur) - 32 + (5/9.0);
-        return temperature;
+    public static BigDecimal convertToCelsius(int fahrenheit) {
+        return new BigDecimal((fahrenheit - 32) * 5)
+                .divide(new BigDecimal(9), MathContext.DECIMAL128);
     }
 }
