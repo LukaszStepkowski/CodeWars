@@ -1,5 +1,7 @@
+import java.util.Arrays;
+
 public class School {
     public static int getAverage(int[] marks){
-        return 0;
+        return (int)Arrays.stream(marks).average().orElse(0);
     }
 }
