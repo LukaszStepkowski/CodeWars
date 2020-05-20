@@ -1,5 +1,9 @@
 public class Kata5 {
     public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
-        // Your code here
+        int sum = yourPoints;
+        for (Integer integer : classPoints){
+            sum += integer;
+        }
+        return yourPoints > sum / (classPoints.length + 1);
     }
 }
