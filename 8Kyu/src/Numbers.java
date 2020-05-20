@@ -1,6 +1,8 @@
+import java.text.DecimalFormat;
+
 public class Numbers {
     public static double TwoDecimalPlaces(double number) {
-        //Write your code here
-        return 0.00;
+        DecimalFormat df = new DecimalFormat("#.##");
+        return Double.valueOf(df.format(number)).doubleValue();
     }
 }
