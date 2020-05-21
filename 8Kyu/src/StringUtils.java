@@ -1,5 +1,5 @@
 public class StringUtils {
     public static boolean isDigit(String s) {
-        // your code goes here
+       return (s.matches("\\d") && Integer.valueOf(s) < 10) ? true : false;
     }
 }
