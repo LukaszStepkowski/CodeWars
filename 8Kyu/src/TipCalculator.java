@@ -5,13 +5,13 @@ public class TipCalculator {
             case "terrible":
                 return 0;
             case "poor":
-                return i = (int)(amount * 0.05);
+                return i = (int)(Math.ceil(amount * 0.05));
             case "good":
-                return i = (int)(amount * 0.1);
+                return i = (int)(Math.ceil(amount * 0.1));
             case "great":
-                return i = (int)(amount * 0.15);
+                return i = (int)(Math.ceil(amount * 0.15));
             case "excellent":
-                return i = (int)(amount * 0.2);
+                return i = (int)(Math.ceil(amount * 0.2));
             default:
                 return null;
         }
