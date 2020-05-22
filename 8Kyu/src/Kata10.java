@@ -1,5 +1,9 @@
 public class Kata10 {
     public static int rentalCarCost(int d) {
-        // Your solution here
+        if (d < 3) {
+            return d * 40;
+        } else if (d < 7) {
+            return d * 40 - 20;
+        } else return d * 40 - 50;
     }
 }
